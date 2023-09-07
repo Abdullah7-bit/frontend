@@ -1,0 +1,22 @@
+.myborder{
+    border-radius: 20px;
+}
+
+.myicon:hover{
+  color:red;
+}
+
+/* .myimg{
+    filter: blur(100%);
+} */
+.myimg{
+ height: 500px;
+}
+
+.mybox{
+    height: 100px;
+}
+
+.myimages{
+    height: 100px;
+}

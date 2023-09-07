@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // var students = new array1 [{ name : "Ali", grade : "one"},{name: "age", value: "18"}];
+        // var morestudents = new array2 [{ name : "Noman" , grade : "two" },{name: "age", value: "18"}];
+        // var array3 = [students,morestudents];
+
+
+
+        // document.write(array3);
+
+
+        var arr1 = [{
+            name: "lang",
+            value: "English"
+        }, {
+            name: "age",
+            value: "18"
+        }];
+        var arr2 = [{
+            name: "childs",
+            value: '5'
+        }, {
+            name: "lang",
+            value: "German"
+        }];
+
+        Array.prototype.push.apply(arr1, arr2);
+
+        console.log(arr1); 
+    </script>
+
+
+
+</body>
+
+</html>

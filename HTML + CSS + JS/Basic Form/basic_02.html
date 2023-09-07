@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    
+    <!-- data get from textbox -->
+     <h1>Student Admission Form:</h1> <hr>
+    <form>
+        <span>FName</span>
+        <input type="hidden" id="offer" value="20%">
+        <input type="text" id="fname" placeholder="Enter First Name">
+        <br><br>
+
+        <span>LName</span>
+        <input type="text" id="lname" placeholder="Enter Last Name">
+        <br><br>
+
+        <span>Date Of Admission</span>
+        <input type="date" id="doa" >
+        <br><br>
+
+        <span>Select Courses</span>
+         <select id="course">
+             <option value="">Select Courses</option>
+             <option value="HTML">HTML</option>
+             <option value="CSS">CSS</option>
+             <option value="JS">JS</option>
+         </select>
+        <br><br>
+
+        <span>Course Fee</span>
+        <input type="number" id="fee" >
+        <br><br>
+
+        <input type="button" id="btnregister" value="Register" >
+        <br><br>
+    </form>
+
+
+    <!-- <h1 id="offer">Offer 20% </h1> -->
+
+    <!-- data set -->
+    <table border="1"> 
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Admission</th>
+            <th>Course</th>
+            <th>Fee</th>
+        </tr>
+        <tr>
+            <td id="tbl_fname"></td>
+            <td id="tbl_lname"></td>
+            <td id="tbl_doa"></td>
+            <td id="tbl_course"></td>
+            <td id="tbl_fee"></td>
+        </tr>
+    </table>
+
+
+    <!-- jquery code -->
+
+    <script>
+        $(document).ready(function(){
+
+            // button code
+
+            $("#btnregister").click(function(){
+                 
+              var fname = $("#fname").val();  // var fname = document.getElementById("fname").value;
+              var lname = $("#lname").val();  
+              var doa = $("#doa").val(); 
+              var course = $("#course").val(); 
+              var fee = $("#fee").val(); 
+             // var offer = $("#offer").text();  // div .text()  or Textbox .val(); 
+              var offer = $("#offer").val();
+ 
+            //   alert("First Name is : " + fname + "Last Name is : " + lname 
+            //   + "Admission Date : " + doa + "Course : " + course  + "Fee : " + fee );
+
+
+               $("#tbl_fname").html(fname);
+               $("#tbl_lname").html(lname);
+               $("#tbl_doa").html(doa);
+               $("#tbl_course").html(course);
+               $("#tbl_fee").html("$" + fee + "(" + offer  + ")");
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <span>Name of Student: </span>
+                    <input type="text" id="stname" class="form-control" onkeyup="mark()">
+                </div>
+                <div class="col-4">
+                    <span>Class: </span>
+                    <input type="text" id="stclass" class="form-control" onkeyup="mark()">
+                </div>
+                <div class="col-4">
+                    <span>Roll # </span>
+                    <input type="text" id="stroll" class="form-control" onkeyup="mark()">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-3">
+                    <span>Urdu: </span>
+                    <input type="text" id="sub1" class="form-control" onkeyup="mark()">
+                </div>
+                <div class="col-3">
+                    <span>Islamiat: </span>
+                    <input type="text" id="sub2" class="form-control" onkeyup="mark()">
+                </div>
+                <div class="col-3">
+                    <span>Mathmatics: </span>
+                    <input type="text" id="sub3" class="form-control" onkeyup="mark()">
+                </div>
+                <div class="col-3">
+                    <span>Computer: </span>
+                    <input type="text" id="sub4" class="form-control" onkeyup="mark()">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <div class="container">
+        <table class="table table-bordered bg-warning mt-4 ">
+            <tr>
+                <th colspan='10'>
+                    <center>
+                        <h1>
+                            <center> Marksheet </center>
+                        </h1>
+                    </center>
+                </th>
+            </tr>
+            <tr>
+                <td> Name of Student: </td>
+                <td id="display_stname"></td>
+
+                <td>Class: </td>
+                <td id="display_stclass"></td>
+
+                <td>Roll # </td>
+                <td id="display_stroll"> </td>
+            </tr>
+            <tr>
+                <td>Urdu: </td>
+                <td id="display_sub1"></td>
+            </tr>
+            <tr>
+                <td>Islamiat:</td>
+                <td id="display_sub2"> </td>
+            </tr>
+            <tr>
+                <td>Mathmatics: </td>
+                <td id="display_sub3"></td>
+            </tr>
+            <tr>
+                <td>Computer: </td>
+                <td id="display_sub4"></td>
+            </tr>
+            <tr>
+
+                <td>Total Obtain Marks:</td>
+                <td id="tobtain"></td>
+
+                <td>Total Marks of all Subjects:</td>
+                <td id="tmarksA"></td>
+
+                <td>Percentage:</td>
+                <td id="percent"></td>
+
+                <td>Grade:</td>
+                <b></b>
+                <td id="grade"></td></b>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function mark() {
+            // Intro Details
+            var stname = document.getElementById("stname").value;
+            var stclass = document.getElementById("stclass").value;
+            var stroll = document.getElementById("stroll").value;
+
+            document.getElementById("display_stname").innerHTML = stname;
+            document.getElementById("display_stclass").innerHTML = stclass + "th";
+            document.getElementById("display_stroll").innerHTML = stroll;
+
+            // subjects 
+            var sub1 = document.getElementById("sub1").value;
+            var sub2 = document.getElementById("sub2").value;
+            var sub3 = document.getElementById("sub3").value;
+            var sub4 = document.getElementById("sub4").value;
+
+            document.getElementById("display_sub1").innerHTML = sub1;
+            document.getElementById("display_sub2").innerHTML = sub2;
+            document.getElementById("display_sub3").innerHTML = sub3;
+            document.getElementById("display_sub4").innerHTML = sub4;
+
+            //other marks and calculations
+            var tmarks = 100;
+            var tmarksA = tmarks * 4;
+            var tobtain = parseInt(sub1) + parseInt(sub2) + parseInt(sub3) + parseInt(sub4);
+            var percent = ((tobtain) / (tmarks * 4)) * 100;
+
+            document.getElementById("tmarksA").innerHTML = tmarksA;
+            document.getElementById("tobtain").innerHTML = tobtain;
+            document.getElementById("percent").innerHTML = percent + "%";
+
+            // grade
+            var grade = grd();
+
+            function grd() {
+                if ((sub1, sub2, sub3, sub4) < 33) {
+                    document.getElementById("grade").style.color = "red";
+                    document.getElementById("grade").innerHTML = "Failed";
+                    // document.write("Grade: <span class='text-danger'> Failed </span>");
+
+                } else if (percent >= 80) {
+                    document.getElementById("grade").style.color = "blue";
+                    document.getElementById("grade").innerHTML = "A-1";
+                    // document.write("Grade : <span class='text-success'>A-1</span>");
+
+                } else if (percent >= 70) {
+                    document.getElementById("grade").style.color = "green";
+                    document.getElementById("grade").innerHTML = "A";
+                    // document.write("Grade : <span class='text-primary'>A</span>");
+                } else if (percent >= 60) {
+                    document.getElementById("grade").style.color = "black";
+                    document.getElementById("grade").innerHTML = "B";
+                    // document.write("Grade : <span class='text-primary'>B</span>");
+                } else if (percent >= 50) {
+                    document.getElementById("grade").style.color = "purple";
+                    document.getElementById("grade").innerHTML = "C";
+                    // document.write("Grade : <span class='text-warning'>C</span>");
+                } else if (percent >= 40) {
+                    document.getElementById("grade").style.color = "pink";
+                    document.getElementById("grade").innerHTML = "D";
+                    // document.write("Grade : <span class='text-warning'>D</span>");
+                } else if (percent >= 33) {
+                    document.getElementById("grade").style.color = "brown";
+                    document.getElementById("grade").innerHTML = "Pass";
+                    // document.write("Grade : <span class='text-dark'>Pass</span>");
+                } else {
+                    document.getElementById("grade").style.color = "red";
+                    document.getElementById("grade").innerHTML = "Failed.";
+                    // document.write("Grade: <span class='text-danger'> Failed </span>")
+                }
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

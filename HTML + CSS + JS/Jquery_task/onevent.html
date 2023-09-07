@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <style>
+        #mybox{
+            height: 300px;
+            width: 100%;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="mybox">
+        <h1>hello</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae consequatur a dolore provident quibusdam sapiente rem perspiciatis ducimus? Provident repellat iure, possimus saepe ex fugiat minus officia non veritatis tempora!</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+          
+            $("#mybox").on({
+                mouseover:function(){
+                $("body").css("background-color", "red");
+               },
+               mouseleave:function(){
+                  $('body').css('background','none');
+               }
+
+            });
+        })
+    </script>
+</body>
+</html>

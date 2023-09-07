@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar ul {
+            padding: 0px;
+            list-style: none;
+
+        }
+
+        .navbar ul li {
+            display: inline-block;
+            position: relative;
+            line-height: 21px;
+            text-align: left;
+        }
+
+        .navbar ul li a {
+            display: block;
+            padding: 8px 12px;
+            text-decoration: none;
+            /* color: antiquewhite; */
+        }
+
+        .navbar ul li a:hover {
+            color: aqua;
+            display: block;
+
+        }
+
+        .navbar ul li ul.dropdown {
+            display: none;
+            position: absolute;
+            left: 0px;
+
+        }
+
+        ul li:hover ul.dropdown {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+                <a href="#">Services</a>
+                <ul class="dropdown">
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

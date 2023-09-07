@@ -1,0 +1,15 @@
+Aptech plan after eid
+
+~ will create a single layout which will contain all the assignments and will continue updating it 
+~ probably used git hub for updating
+
+
+
+
+Aptech
+~ Discuss the future of Aptech (Financial + Teacher POV)
+~ practice about position property css
+~ is it possible to changed website inner structure from css to bootstrap
+~ Create layout missing
+~ fav-icon 
+

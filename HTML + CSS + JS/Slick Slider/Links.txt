@@ -1,0 +1,7 @@
+https://github.com/lukehaas/Scrollify
+
+
+
+https://cdnjs.com/libraries/slick-carousel
+
+https://kenwheeler.github.io/slick/

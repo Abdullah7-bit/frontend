@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #box{
+        width: 100%;
+        height: auto;
+        
+    }
+    #box h1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .main{
+        float: left;
+        width: 150px;
+        height: 150px;
+        position: relative;
+        background-color: blueviolet;
+        border-radius: 1700px;
+
+        animation-name: myanimation;
+        animation-duration: 12s;
+        animation-delay: 0.4s;
+        animation-play-state: running;
+        animation-iteration-count: infinite;
+        
+    }
+
+    @keyframes myanimation 
+    {
+        0%{ background-color: yellow; left: 0px; top: 0px;}    
+        25%{background-color: rgb(10, 199, 152); left: 1198px; top: 0px;}
+        50%{background-color: brown; left: 1198px; top: 390px;}
+        75%{background-color: blueviolet; left: 0px; top: 390px;}
+        100%{background-color: blue; left: 0px; top: 0px;}
+    } 
+    
+</style>
+<body>
+    <div id="box">
+        <h1>Animation of a Circle.</h1>
+        <div class="main">
+        </div>
+    </div>
+</body>
+</html>

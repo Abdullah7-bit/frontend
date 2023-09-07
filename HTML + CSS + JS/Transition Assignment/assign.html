@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+          position: relative;
+          width: 50%;
+        }
+        
+        .image {
+          display: block;
+          width: 300px;
+          height: auto;
+          
+        }
+        
+        .overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          /* background-color: #008CBA; */
+          overflow: hidden;
+          width: 0;
+          height: 100%;
+          transition: 1s ease;
+        }
+        
+        .container:hover .overlay {
+          width: 1000px;
+        }
+        
+        .text {
+          color: black;
+          font-size: 17px;
+          position: relative;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          white-space: nowrap;
+          margin-left: 220px;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <div class="container">
+          <img src="0.png" alt="Avatar" class="image">
+          <div class="overlay">
+                <div class="text">
+                    C# is a general-purpose, multi-paradigm programming language encompassing  <br>
+                    static typing, strong typing, imperative, declarative, functional,  <br>
+                    object-oriented, generic, and component-oriented programming disciplines.
+                </div>
+          </div>
+        </div>
+        
+        <div class="container">
+            <img src="1.jpg" alt="Avatar" class="image">
+            <div class="overlay">
+                  <div class="text">
+                    Python is an interpreted, high-level and general-purpose programming language. <br>
+                    Python's design philosophy emphasizes code readability with its notable use <br>
+                    of significant indentation.
+                  </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <img src="2.png" alt="Avatar" class="image">
+            <div class="overlay">
+                  <div class="text">
+                    Ruby is an interpreted, high-level, general-purpose programming lang. Ruby is <br> 
+                    dynamically typed and uses garbage collection. It was designed and developed in <br>
+                    mid-1990s by Yukihiro "Matz" Matsumoto in Japan. 
+                  </div>
+            </div>
+          </div>
+
+        </body>
+        </html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slick Slider</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width: 50%;
+            margin: 100px auto;
+        }
+
+        .slick-slide {
+            margin: 0px 20px;
+        }
+
+        .slick-slide img {
+            width: 100%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+
+        .slick-slide {
+            transition: all ease-in-out .3s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: .5;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="vertical-center slider">
+        <div>
+            <img src="https://source.unsplash.com/1600x900/?architecture">
+        </div>
+        <div>
+            <img src="https://source.unsplash.com/1600x900/?wallpapers">
+        </div>
+        <div>
+            <img src="https://source.unsplash.com/1600x900/?textures-patterns">
+        </div>
+        <div>
+            <img src="https://source.unsplash.com/1600x900/?nature,water">
+        </div>
+        <div>
+            <img src="https://source.unsplash.com/1600x900/?nature,water">
+        </div>
+        <div>
+            <img src="https://source.unsplash.com/1600x900/?nature,mountains">
+        </div>
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".vertical-center").slick({
+                dots: true,
+                vertical: true,
+                centerMode: true,
+            });
+
+
+
+            // $('.center').slick({
+            //     centerMode: true,
+            //     centerPadding: '60px',
+            //     slidesToShow: 3,
+            //     responsive: [{
+            //             breakpoint: 768,
+            //             settings: {
+            //                 arrows: false,
+            //                 centerMode: true,
+            //                 centerPadding: '40px',
+            //                 slidesToShow: 3
+            //             }
+            //         },
+            //         {
+            //             breakpoint: 480,
+            //             settings: {
+            //                 arrows: false,
+            //                 centerMode: true,
+            //                 centerPadding: '40px',
+            //                 slidesToShow: 1
+            //             }
+            //         }
+            //     ]
+            // });
+            // $(".center").slick({
+            //     dots: true,
+            //     infinite: true,
+            //     centerMode: true,
+            //     slidesToShow: 5,
+            //     slidesToScroll: 3
+            // });
+        });
+    </script>
+</body>
+
+</html>

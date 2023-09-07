@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Dropdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <div class="selector">
+            <div id="selectfield">
+                <p id="selectText">Choose the Social Media</p>
+                <img src="SelectMenu_Img/arrow.png" id="arrowIcon">
+            </div>
+            <ul id="list" class="hide">
+                <li class="option">
+                    <img src="SelectMenu_Img/facebook.png" alt="">
+                    <p>Facebook</p>
+                </li>
+                <li class="option">
+                    <img src="SelectMenu_Img/instagram.png" alt="">
+                    <p>Instagram</p>
+                </li>
+                <li class="option">
+                    <img src="SelectMenu_Img/pinterest.png" alt="">
+                    <p>Pinterest</p>
+                </li>
+                <li class="option">
+                    <img src="SelectMenu_Img/twitter.png" alt="">
+                    <p>Twitter</p>
+                </li>
+                <li class="option">
+                    <img src="SelectMenu_Img/whatsapp.png" alt="">
+                    <p>Whatsapp</p>
+                </li>
+                <li class="option">
+                    <img src="SelectMenu_Img/youtube.png" alt="">
+                    <p>YouTube</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        var selectfield = document.getElementById("selectfield");
+        var selectText = document.getElementById("selectText");
+        var option = document.getElementsByClassName("option");
+        var list = document.getElementById("list");
+        var arrowIcon = document.getElementById("arrowIcon");
+
+
+        selectfield.onclick = function () {
+            list.classList.toggle("hide");
+            arrowIcon.classList.toggle("rotate");
+        }
+
+
+
+        for (opt of option) {
+            opt.onclick = function () {
+                selectText.innerHTML = this.textContent;
+                list.classList.toggle("hide");
+                arrowIcon.classList.toggle("rotate");
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

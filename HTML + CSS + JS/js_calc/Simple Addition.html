@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        div {
+            border: 2px dashed deepskyblue;
+            border-radius: 2px;
+            padding: 9px;
+            width: 50vh;
+            height: 30vh;
+        }
+
+        input {
+
+            width: 20vh;
+        }
+
+        #text1 {
+            align-items: stretch;
+            width: 200px;
+        }
+
+        #text1 {
+            width: 25%;
+        }
+
+        #first {
+            margin-left: 9vh;
+        }
+
+        #second {
+            margin-left: 6.4vh;
+        }
+
+        button {
+            margin-top: 10vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+        <label id="text1"> Enter First Parameter: </label>
+        <input type="text" id="first">
+
+        <br><br>
+
+        <label id="text2"> Enter Second Parameter: </label>
+        <input type="text" id="second">
+
+        <center><button type="button" onclick="demo()">Click Here</button></center>
+
+        <center>
+            <h3 id="display"></h3>
+        </center>
+
+
+
+    </div>
+
+
+
+
+    <script>
+        function demo() {
+
+            var first, second;
+
+            first = document.getElementById("first").value;
+            second = document.getElementById("second").value;
+
+            dynam(first, second);
+        }
+
+        function dynam(first, second) {
+            var q = parseInt(first);
+            var w = parseInt(second);
+            var e = q + w;
+
+            document.getElementById("display").innerHTML = e;
+        }
+    </script>
+
+
+</body>
+</html>
