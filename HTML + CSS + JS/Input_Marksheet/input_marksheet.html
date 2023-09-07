@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    <script>
+        function mark() {
+            // Intro Details
+            var stname = prompt("Enter Student Name");
+            var stclass = prompt("Enter the Class");
+            var stroll = prompt("Enter Roll Number");
+
+            document.getElementById("stname").innerHTML = stname;
+            document.getElementById("stclass").innerHTML = stclass;
+            document.getElementById("stroll").innerHTML = stroll;
+
+            // subjects 
+            var sub1 = prompt("Enter English Marks");
+            var sub2 = prompt("Enter Math Marks");
+            var sub3 = prompt("Enter Computer Marks");
+            var sub4 = prompt("Enter Urdu Marks");
+            var sub5 = prompt("Enter History Marks");
+
+            document.getElementById("sub1").innerHTML = sub1;
+            document.getElementById("sub2").innerHTML = sub2;
+            document.getElementById("sub3").innerHTML = sub3;
+            document.getElementById("sub4").innerHTML = sub4;
+            document.getElementById("sub5").innerHTML = sub5;
+
+            //other marks and calculations
+            var tmarks = prompt("Enter Total Marks of Each Subject");
+            var tmarksA = tmarks * 5;
+            var tobtain = parseInt(sub1) + parseInt(sub2) + parseInt(sub3) + parseInt(sub4) + parseInt(sub5);
+            var percent = ((tobtain) / (tmarks * 5)) * 100;
+
+            document.getElementById("tmarksA").innerHTML = tmarksA;
+            document.getElementById("tobtain").innerHTML = tobtain;
+            document.getElementById("percent").innerHTML = percent;
+
+            // grade
+            var grade = grd();
+            function grd() {
+                if ((sub1, sub2, sub3, sub4, sub5) < 33) {
+                    document.getElementById("grade").style.color = "red";
+                    document.getElementById("grade").innerHTML = "Failed";
+                    // document.write("Grade: <span class='text-danger'> Failed </span>");
+
+                } else if (percent >= 80) {
+                    document.getElementById("grade").style.color = "blue";
+                    document.getElementById("grade").innerHTML = "A-1";
+                    // document.write("Grade : <span class='text-success'>A-1</span>");
+
+                } else if (percent >= 70) {
+                    document.getElementById("grade").style.color = "green";
+                    document.getElementById("grade").innerHTML = "A";
+                    // document.write("Grade : <span class='text-primary'>A</span>");
+                } else if (percent >= 60) {
+                    document.getElementById("grade").style.color = "black";
+                    document.getElementById("grade").innerHTML = "B";
+                    // document.write("Grade : <span class='text-primary'>B</span>");
+                } else if (percent >= 50) {
+                    document.getElementById("grade").style.color = "purple";
+                    document.getElementById("grade").innerHTML = "C";
+                    // document.write("Grade : <span class='text-warning'>C</span>");
+                } else if (percent >= 40) {
+                    document.getElementById("grade").style.color = "pink";
+                    document.getElementById("grade").innerHTML = "D";
+                    // document.write("Grade : <span class='text-warning'>D</span>");
+                } else if (percent >= 33) {
+                    document.getElementById("grade").style.color = "brown";
+                    document.getElementById("grade").innerHTML = "Pass";
+                    // document.write("Grade : <span class='text-dark'>Pass</span>");
+                } else {
+                    document.getElementById("grade").style.color = "red";
+                    document.getElementById("grade").innerHTML = "Failed.";
+                    // document.write("Grade: <span class='text-danger'> Failed </span>")
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <table class="table table-bordered bg-warning">
+
+            <tr>
+                <th colspan='12'>
+                    <center>
+                        <h1>
+                            <center> Marksheet </center>
+                        </h1>
+                    </center>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="12">
+                    <center><button type="button" onclick="mark()" class="btn btn-dark">Fill</button></center>
+                </td>
+            </tr>
+            <tr>
+                <td> Name of Student: </td>
+                <td id="stname"></td>
+
+                <td>Class: </td>
+                <td id="stclass"></td>
+
+                <td>Roll # </td>
+                <td id="stroll"> </td>
+            </tr>
+            <tr>
+                <td>English:</td>
+                <td id="sub1"> </td>
+            </tr>
+            <tr>
+                <td>Urdu: </td>
+                <td id="sub2"></td>
+            </tr>
+            <tr>
+                <td>Islamiat:</td>
+                <td id="sub3"> </td>
+            </tr>
+            <tr>
+                <td>Mathmatics: </td>
+                <td id="sub4"></td>
+            </tr>
+            <tr>
+                <td>Computer: </td>
+                <td id="sub5"></td>
+            </tr>
+            <tr>
+                
+                <td>Total Obtain Marks:</td>
+                <td id="tobtain"></td>
+
+                <td>Total Marks of all Subjects:</td>
+                <td id="tmarksA"></td>
+
+                <td>Percentage:</td>
+                <td id="percent"></td>
+
+                <td> Grade:</td>
+                <b></b>
+                <td id="grade"></td></b>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

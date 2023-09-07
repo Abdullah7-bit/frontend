@@ -1,0 +1,29 @@
+#nav ul{
+    margin-top: 40px;
+    font-size: larger;
+    
+}
+#nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-inline: 20px;
+}
+#nav ul li a{
+    text-decoration: none;
+    color: black;
+    
+}
+#ico{
+    margin-top: 40px;
+    font-size: larger;
+}
+#ico i{
+    margin-inline: 10px;
+}
+
+.txt{
+    width: fit-content;
+    position: relative;
+    top: -290px;
+    left: 390px;
+}
