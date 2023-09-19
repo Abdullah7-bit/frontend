@@ -8,35 +8,36 @@
     <link rel="stylesheet" href="HTML + CSS + JS/Basic Form/Basic_form.html">
 </head>
 
-<div id="includedContent1" style="height: 500px;"></div>
-<div id="includedContent2" style=" height: 1200px;"></div>
+<div id="container1" style="height: 500px;"></div>
+<!-- <div id="includedContent2" style=" height: 1200px;"></div> -->
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    // Select the elements where you want to insert the content
-    var container1 = document.getElementById('includedContent1');
-    var container2 = document.getElementById('includedContent2');
-    // Add more container variables for additional content if needed
+document.addEventListener('DOMContentLoaded', function () {
+    // Define an array of filenames
+    var filenames = [
+        'HTML/first.html',
+        // Add more filenames as needed
+    ];
 
-    // Create 'object' elements for each HTML file
-    var objectElement1 = document.createElement('object');
-    objectElement1.setAttribute('data', 'HTML + CSS + JS/animate/animate.html');
-    objectElement1.setAttribute('width', '100%');
-    objectElement1.setAttribute('height', '100%');
+    // Loop through and load each HTML file
+    for (var i = 0; i < filenames.length; i++) {
+        // Select the container with the corresponding ID
+        var container = document.getElementById('container' + (i + 1));
 
-    var objectElement2 = document.createElement('object');
-    objectElement2.setAttribute('data', 'HTML + CSS + JS/Basic Form/Basic_form.html');
-    objectElement2.setAttribute('width', '100%');
-    objectElement2.setAttribute('height', '100%');
-    // Create more 'object' elements for additional files if needed
+        // Create an 'object' element
+        var objectElement = document.createElement('object');
 
-    // Append the 'object' elements to the containers
-    container1.appendChild(objectElement1);
-    container2.appendChild(objectElement2);
-    // Append more 'object' elements to additional containers if needed
+        // Set the 'data', 'width', and 'height' attributes using the filename from the array
+        objectElement.setAttribute('data', filenames[i]);
+        objectElement.setAttribute('width', '100%');
+        objectElement.setAttribute('height', '100%');
+
+        // Append the 'object' element to the container
+        container.appendChild(objectElement);
+    }
 });
 
-var numFiles = ['HTML + CSS + JS\Amazing Slider task\slider.html','HTML + CSS + JS/animate/animate.html',''];
+
 
 </script>
 
