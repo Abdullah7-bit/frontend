@@ -1,5 +1,0 @@
-Form Handling: ( onclick )
-OnClick - ( click() )
-InnerHtml - ( html() ) 
-InnerText - ( text() )
-document.getElementById("abc").value   - ( $("#id").val() )
