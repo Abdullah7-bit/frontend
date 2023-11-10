@@ -1,91 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="../lib/jquery.min.js"></script>
     <script src="jquery.elevateZoom-3.0.8.min.js"></script>
     <script src="jquery.elevatezoom.js"></script>
 </head>
 
-    <style>
-        .out{
-            margin: 0px;
-            padding: 0px;
-            width: 100%;
-            height: auto;
-            float: left;
-        }
-        .in{
-            width: 48%;
-            height: auto;
-            display: inline-block;
-            padding-left: 13px;
-            padding-bottom: 8px;
-            
-        }
-        .in img{
-            width: 100%;
-            height: 500px;
-        }
+<style>
+    .out {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: auto;
+        float: left;
+    }
 
-    </style>
+    .in {
+        width: 48%;
+        height: auto;
+        display: inline-block;
+        padding-left: 13px;
+        padding-bottom: 8px;
+
+    }
+
+    .in img {
+        width: 100%;
+        height: 500px;
+    }
+</style>
+
 <body>
 
     <div class="out">
         <div class="in">
-            <img id="myimg" src="1.jpg" alt="" data-zoom-image="1.jpg">
+            <img id="myimg" src="../img/1.jpg" alt="" data-zoom-image="../img/1.jpg">
         </div>
-        
+
         <div class="in">
-            <img id="new" src="2.jpg" alt="" data-zoom-image="2.jpg">
+            <img id="new" src="../img/2.jpg" alt="" data-zoom-image="../img/2.jpg">
         </div>
-    
+
         <div class="in">
-            <img id="myimg2" src="3.jpg" alt="" data-zoom-image="3.jpg">
+            <img id="myimg2" src="../img/3.jpg" alt="" data-zoom-image="../img/3.jpg">
         </div>
-    
+
         <div class="in">
-            <img id="myimg3" src="4.jpg" alt="" data-zoom-image="4.jpg">
+            <img id="myimg3" src="../img/4.jpg" alt="" data-zoom-image="../img/4.jpg">
         </div>
-    
+
         <div class="in">
-            <img id="myimg4" src="7.jpg" alt="" data-zoom-image="7.jpg">
+            <img id="myimg4" src="../img/7.jpg" alt="" data-zoom-image="../img/7.jpg">
         </div>
-    
+
         <div class="in">
-            <img id="myimg5" src="10.jpg" alt="" data-zoom-image="10.jpg">
+            <img id="myimg5" src="../img/11.jpg" alt="" data-zoom-image="../img/11.jpg">
         </div>
-        
+
     </div>
 
     <script>
         $("#myimg").elevateZoom();
 
         $("#new").elevateZoom({
-        zoomType				: "lens",
-        lensShape : "round",
-        lensSize    : 200
+            zoomType: "lens",
+            lensShape: "round",
+            lensSize: 200
         });
 
-        $("#myimg2").elevateZoom({tint:true, tintColour:'#F90', tintOpacity:0.5});
+        $("#myimg2").elevateZoom({ tint: true, tintColour: '#F90', tintOpacity: 0.5 });
 
         $("#myimg3").elevateZoom({
-        zoomType				: "inner",
-        cursor: "crosshair"
-        });        
+            zoomType: "inner",
+            cursor: "crosshair"
+        });
 
-        $("#myimg4").elevateZoom({easing : true});
+        $("#myimg4").elevateZoom({ easing: true });
 
         $("#myimg5").elevateZoom({
-            zoomWindowWidth:100,
-            zoomWindowHeight:300
+            zoomWindowWidth: 100,
+            zoomWindowHeight: 300
         });
 
     </script>
 
 
 </body>
+
 </html>
